@@ -83,6 +83,11 @@ d-i finish-install/reboot_in_progress note
 #For the update
 d-i pkgsel/update-policy select none
 
+d-i mirror/country string manual
+d-i mirror/http/hostname string se.archive.ubuntu.com
+d-i mirror/http/directory string /ubuntu/
+d-i mirror/http/proxy string
+
 # debconf-get-selections --install
 #Use mirror
 #d-i apt-setup/use_mirror boolean true
