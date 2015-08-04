@@ -108,6 +108,6 @@ choose-mirror-bin mirror/http/proxy string
 {{ if and .Mirror .Postinstall }} 
 d-i preseed/late_command string \
     chroot /target \
-    /bin/sh -c "/usr/bin/wget -O /tmp/postinstall http://{{.Mirror}}/v1/{{.Macaddress}}/postinstall && \
+    /bin/sh -c "/usr/bin/wget -O /tmp/postinstall http://{{.Mirror}}/mac/v1/{{.Macaddress}}/postinstall && \
     /bin/sh -x /tmp/postinstall"
 {{end}}
