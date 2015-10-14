@@ -26,7 +26,7 @@ d-i base-installer/kernel/override-image string linux-server
 d-i debconf debconf/frontend select Noninteractive
 d-i pkgsel/install-language-support boolean false
 
-tasksel tasksel/first multiselect standard, ubuntu-server
+#tasksel tasksel/first multiselect standard, ubuntu-server
 
 d-i partman-auto/init_automatically_partition select biggest_free
 d-i partman-auto/disk string /dev/sda
