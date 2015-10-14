@@ -27,7 +27,7 @@ d-i debconf debconf/frontend select Noninteractive
 d-i pkgsel/install-language-support boolean false
 
 #tasksel tasksel/first multiselect standard, ubuntu-server
-tasksel tasksel/first multiselect minimal
+tasksel tasksel/first multiselect ssh-server
 
 d-i partman-auto/init_automatically_partition select biggest_free
 d-i partman-auto/disk string /dev/sda
@@ -65,7 +65,7 @@ d-i user-setup/allow-password-weak boolean true
 
 ## minimum is puppet and ssh and ntp
 # Individual additional packages to install
-d-i pkgsel/include string openssh-server ntp
+#d-i pkgsel/include string openssh-server ntp
 
 # Whether to upgrade packages after debootstrap.
 # Allowed values: none, safe-upgrade, full-upgrade
